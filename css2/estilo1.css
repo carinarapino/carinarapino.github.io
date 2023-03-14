@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+    
+  }
+  html{
+    height: 200%;
+  }
+
+.cajas {
+    display: grid;
+
+}
+.cajas > * {
+    text-align: center;
+    padding: 10px;
+}
+.imagen {
+    grid-area: imagen;
+    background-color: palevioletred;
+    border-radius: 0 20px 0 0;
+}
+    img {
+    border-radius: 50%;
+    border: 10px solid gray;
+}
+
+
+.header {
+    grid-area: header;
+    background-color: white;
+    color: palevioletred;
+    line-height: 400%;
+    font-size: 150%;
+
+
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: palevioletred;
+    border-radius: 0 0 20px 0;
+    line-height: 230%;
+    
+}
+.main {
+    grid-area: main;
+    background-color:rgb(186, 172, 172);
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 20px;
+    line-height: 30px;
+
+}
+.main2 {
+    grid-area: main2;
+    background-color: rgb(186, 172, 172);
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 20px;
+    line-height: 30px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(186, 172, 172);
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 30px 200px 30px 200px;
+}
+
+.cajas {
+    grid-template: 
+    "imagen header header" 200px
+    "sidebar main main" 35%
+    "sidebar main2 main2" 43%
+    "sidebar footer footer" 25%/
+    30% 35% 35%;
+}
+@media only screen and (max-width: 750px) {
+    .cajas {
+        grid-template: 
+        "imagen header" 200px
+        "sidebar sidebar" 40%
+        "main main" 25%
+        "main2 main2" 33%
+        "footer footer" 15%/
+        40% 60%;   
+    }
+    .header {
+        font-size: 100%;
+    
+    }
+    .sidebar {
+        line-height: 100%;
+        padding: 40px;
+    }
+    .clase2 {
+        padding: 2px;
+    }
+    .footer {
+        padding: 30px 30px 30px 30px;
+    }
+
+}
+.clasesubtitulo {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    padding: 15px;
+}
+.clase1 {
+    padding: 10px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(54, 48, 48);
+}
+.clase2 {
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(54, 48, 48);
+    text-align: left;
+    padding: 10px;
+}
+
+.claseboton {
+   background-color: pink;
+   padding: 2px;
+   border-radius: 5px;
+   font-size: 20px;
+}
+.claseboton:hover {
+    background-color: palevioletred;
+}
+.oculto1 {
+    display: none;
+}
+.mostrar1 {
+    display: block;
+    text-align: justify;
+    line-height: 20px;
+}
+.skills {
+    padding: 1em;
+}
+.skill__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.skills__bar,
+.skills__bar::after {
+    position: relative;
+    width: 175px;
+    height: 8px;
+    background-color: white;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.skills__bar::after {
+    content: '';
+    position: absolute;
+    left: -175px;
+    background-color: rgb(54, 48, 48);
+    transition: var(--transition);
+    animation: skills-bar-fill 2s ease-in-out forwards;
+}
+.skills__bar--10::after {
+    --skills-bar-lenght:10%
+}
+.skills__bar--20::after {
+    --skills-bar-lenght:20%
+}
+.skills__bar--30::after {
+    --skills-bar-lenght:30%
+}
+.skills__bar--40::after {
+    --skills-bar-lenght:40%
+}
+.skills__bar--50::after {
+    --skills-bar-lenght:50%
+}
+.skills__bar--60::after {
+    --skills-bar-lenght:60%
+}
+.skills__bar--70::after {
+    --skills-bar-lenght:70%
+}
+.skills__bar--80::after {
+    --skills-bar-lenght:80%
+}
+.skills__bar--90::after {
+    --skills-bar-lenght:90%
+}
+.skills__bar--100::after {
+    --skills-bar-lenght:100%
+}
+@keyframes skills-bar-fill {
+    to {
+        transform: translateX(var(--skills-bar-lenght));
+    }
+}
+
+.parrafo {
+    padding: 10px;
+
+}
